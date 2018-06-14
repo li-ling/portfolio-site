@@ -1,0 +1,22 @@
+.Portfolio {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.Portfolio li {
+    list-style: none;
+    display: inline-block;
+    width: 120px;
+    padding: 5px;
+    margin: 0 10px;
+    border: 1px solid #E85A4F;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.Portfolio li:hover, .Selected{
+    background-color: #E85A4F;
+    color: white;
+    cursor: pointer;
+}

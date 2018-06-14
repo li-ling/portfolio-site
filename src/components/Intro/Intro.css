@@ -5,18 +5,18 @@
 
 .IntroContent {
     width: 80%;    
-    box-sizing: border-box;
     display: flex;    
     flex-flow: row;
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    padding: 10px;
+    padding: 20px 0;
+    text-align: center;
 } 
 
 .Intro img {        
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
 }
 
 .SubTitle {
@@ -26,12 +26,14 @@
 @media (min-width: 600px){
     
     .IntroContent {
-        width: 80%;
+        /* width: 80%; */
         max-width: 750px;
+        min-width: 600px;
         flex-flow: row;        
         justify-content: space-between;
         margin: auto;
-        padding: 10px;
+        padding: 10px; 
+        text-align: left;       
     } 
     
     .Intro Img {        
