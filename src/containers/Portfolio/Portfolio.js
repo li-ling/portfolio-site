@@ -4,7 +4,7 @@ import Tile from '../../components/Tile/Tile';
 
 const WORKTYPE_UX = 'UX';
 const WORKTYPE_GRAPHICS = 'Graphics';
-const workTypes = [WORKTYPE_UX,WORKTYPE_GRAPHICS];
+
 class Portfolio extends Component {
     state = {
         UXWorks: [
@@ -47,32 +47,45 @@ class Portfolio extends Component {
               thumbUrl: "http://via.placeholder.com/300x300"
             }
         ],
-        selectedFilter: WORKTYPE_UX
+        workTypes: [{ type: WORKTYPE_UX, isSelected: true},
+                    { type:WORKTYPE_GRAPHICS, isSelected: false}
+                ]
+    }
+
+    onWorkTypeChange = (event, selected) => {
+        const updatedWorkTypes =  [{ type: WORKTYPE_UX, isSelected: selected.type === WORKTYPE_UX},
+                             { type:WORKTYPE_GRAPHICS, isSelected: selected.type === WORKTYPE_GRAPHICS}
+                            ];
+        this.setState({workTypes: updatedWorkTypes});
     }
 
     render() {
-        const Tiles = this.state.selectedFilter === WORKTYPE_UX ? this.state.UXWorks : this.state.GraphicsWorks;
-        
-   return (        
-    <section className={styles.Portfolio}>
-        <h1>Portfolio</h1>
-        <ul>
-            { workTypes.map((f, i)=> 
-                <li key={i}>{f}</li> 
-            ) }
-        </ul>
-        <div className={styles.Tiles}>
-            {Tiles.map((w,i) => 
-                <Tile key={i} 
-                    title = {w.title}
-                    subTitle = {w.subTitle}
-                    thumbUrl = {w.thumbUrl}
-                />                             
-                ) }
-        </div>
-    </section>
-   );
-}
+        const selectedWorkType = this.state.workTypes.filter(w => w.isSelected);
+        const Tiles = selectedWorkType[0].type === WORKTYPE_UX ? this.state.UXWorks : this.state.GraphicsWorks;                
+
+        return (        
+            <section className={styles.Portfolio}>
+                <h1>Portfolio</h1>
+                <ul>
+                    { this.state.workTypes.map((w, i)=> 
+                        <li key={w.type}
+                            onClick={(e) => this.onWorkTypeChange(e, w)}
+                            className={ w.isSelected ? styles.SelectedWorkType : null  }                          
+                        >{w.type}</li> 
+                    ) }
+                </ul>
+                <div className={styles.Tiles}>
+                    {Tiles.map((t,i) => 
+                        <Tile key={i} 
+                            title = {t.title}
+                            subTitle = {t.subTitle}
+                            thumbUrl = {t.thumbUrl}
+                        />                             
+                        ) }
+                </div>
+            </section>
+        );
+    }
 
 }
 

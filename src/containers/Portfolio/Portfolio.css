@@ -13,9 +13,10 @@
     border: 1px solid #E85A4F;
     text-align: center;
     box-sizing: border-box;
+    transition: all .2s ease-in-out;
 }
 
-.Portfolio li:hover, .Selected{
+.Portfolio li:hover, .SelectedWorkType{
     background-color: #E85A4F;
     color: white;
     cursor: pointer;
@@ -24,4 +25,5 @@
 .Tiles {
     margin: 20px;
     flex-flow: row wrap;
+    transition: all .2s ease-in-out;
 }

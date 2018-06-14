@@ -5,7 +5,7 @@ const tile = (props) => {
   return (
     <div>
         <img src={props.thumbUrl} alt={props.title}/>
-        <h2>{props.title}</h2>
+        <h3>{props.title}</h3>
         <h4>{props.subTitle}</h4>             
     </div>
   )

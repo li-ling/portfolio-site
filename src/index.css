@@ -4,13 +4,26 @@ body {
   font-family: 'Lora', serif;
   color: #4F4A41; 
 }
-h1, h2 {
+/* h1, h2 {
+  font-family: 'Lora', serif;
+} */
+
+h1 {
   font-family: 'Lora', serif;
   font-weight: 700;
-  /* #272727; */
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-weight: 400;
 }
 
 h3{
   font-family: 'Monsterra', sans-serif;
   font-weight: 500;
+}
+
+h4{
+  font-family: 'Monsterra', sans-serif;
+  font-weight: 400;
 }
