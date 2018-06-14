@@ -22,8 +22,10 @@
     cursor: pointer;
 }
 
-.Tiles {
+.Tiles {    
     margin: 20px;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
     transition: all .2s ease-in-out;
 }
