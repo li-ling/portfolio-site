@@ -20,3 +20,8 @@
     color: white;
     cursor: pointer;
 }
+
+.Tiles {
+    margin: 20px;
+    flex-flow: row wrap;
+}

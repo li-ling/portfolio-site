@@ -11,7 +11,9 @@ const intro = (props) => {
           <h2>Hi, my name is</h2>
           <h1>Li-Ling Chang</h1>
           <p className={styles.SubTitle}>(Lee Ling Chang)</p>
-          <h3>I am a web developer who is passionate about creating simple and unique user experiences for everyday things.</h3>
+          <h3>I am a web developer who is passionate about creating simple and unique user experiences for everyday things.
+            I also enjoy design graphics and illustrations.
+          </h3>
           </div>
         </div>
       </section>
