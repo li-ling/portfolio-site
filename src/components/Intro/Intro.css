@@ -1,5 +1,42 @@
 .Intro {
-    width: 80%;
-    max-height: 500px;    
+    background-color: #EAE7DC;
+    margin: 20px 0;   
+}
+
+.IntroContent {
+    width: 80%;    
+    box-sizing: border-box;
+    display: flex;    
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: auto;
+    padding: 10px;
+} 
+
+.Intro img {        
+    width: 80%;
+    height: 80%;
+}
+
+.SubTitle {
+    font-style: italic;
+}
+
+@media (min-width: 600px){
+    
+    .IntroContent {
+        width: 80%;
+        max-width: 750px;
+        flex-flow: row;        
+        justify-content: space-between;
+        margin: auto;
+        padding: 10px;
+    } 
+    
+    .Intro Img {        
+        max-width: 100%;
+        height: auto;
+        margin: 10px;
+    }
 }
