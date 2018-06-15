@@ -11,6 +11,9 @@ body {
 h1 {
   font-family: 'Lora', serif;
   font-weight: 700;
+  font-size: 3em;
+  -webkit-margin-before: 0.4em;
+  -webkit-margin-after: 0.4em;
 }
 
 h2 {
@@ -19,11 +22,20 @@ h2 {
 }
 
 h3{
-  font-family: 'Monsterra', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  -webkit-margin-before: 0.3em;
+  -webkit-margin-after: 0.3em;
 }
 
 h4{
-  font-family: 'Monsterra', sans-serif;
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  -webkit-margin-before: 0.2em;
+  -webkit-margin-after: 0.2em;
+
+}
+
+ul{
+  -webkit-padding-start: 0px;
 }

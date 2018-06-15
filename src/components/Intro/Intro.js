@@ -8,12 +8,12 @@ const intro = (props) => {
         <div className={styles.IntroContent}>
          <img src={portraitImg} alt="Me" />
          <div>
-          <h2>Hi, my name is</h2>
+          <p>Hi, my name is</p>
           <h1>Li-Ling Chang</h1>
-          <p className={styles.SubTitle}>(Lee Ling Chang)</p>
-          <h3>I am a web developer who is passionate about creating simple and unique user experiences for everyday things.
+          <p>(pronounced Lee-Ling-Chang)</p>
+          <h4>I am a web developer who is passionate about creating simple and unique user experiences for everyday things.
             I also enjoy design graphics and illustrations.
-          </h3>
+          </h4>
           </div>
         </div>
       </section>

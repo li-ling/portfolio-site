@@ -64,7 +64,7 @@ class Portfolio extends Component {
         const Tiles = selectedWorkType[0].type === WORKTYPE_UX ? this.state.UXWorks : this.state.GraphicsWorks;                
 
         return (        
-            <section className={styles.Portfolio}>
+            <section className={styles.Portfolio} id="Portfolio">
                 <h1>Portfolio</h1>
                 <ul>
                     { this.state.workTypes.map((w, i)=> 
