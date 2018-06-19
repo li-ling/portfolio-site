@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import styles from './Portfolio.css';
 import Tile from '../../components/Tile/Tile';
 
+import bookCover from '../../assets/images/Book_cover_thumb_300.jpg';
+import howTo from '../../assets/images/how_to_thumb_300.jpg';
+import fashion from '../../assets/images/Fashion_Info_thumb_300.jpg';
+import selfPortrait from '../../assets/images/self_portrait_thumb_300.jpg';
+import magzine from '../../assets/images/magzine_thumb_300.jpg';
+import itEvolution from '../../assets/images/IT_Evolution_thumb_300.png';
+
 const WORKTYPE_UX = 'UX';
 const WORKTYPE_GRAPHICS = 'Graphics';
 
@@ -9,42 +16,42 @@ class Portfolio extends Component {
     state = {
         UXWorks: [
             { title: 'Title 1', 
-              subTitle: 'Product Design Concept from Coursera Course work',
+              subTitle: 'Product Design Concept from course work',
               thumbUrl: "http://via.placeholder.com/300x300"
             },
             { title: 'Title 2', 
-              subTitle: 'Information Architectur Design Personal Concept',
+              subTitle: 'Information Architecture Design Personal Concept',
               thumbUrl: "http://via.placeholder.com/300x300"
             },
             { title: 'Title 3', 
-              subTitle: 'Product Design Concept from Coursera Course work',
+              subTitle: 'Product Design Concept from course work',
               thumbUrl: "http://via.placeholder.com/300x300"
             }
         ],
         GraphicsWorks: [
             { title: 'Creative Confidence', 
               subTitle: 'Book cover design from course work',
-              thumbUrl: "http://via.placeholder.com/300x300"
+              thumbUrl: bookCover
             },
             { title: 'How To Get Kids to Eat Their Vegetables and Fruit ', 
-              subTitle: 'Poster sized visual instruction design from course work',
-              thumbUrl: "http://via.placeholder.com/300x300"
-            },
-            { title: 'Fashionable Me', 
-              subTitle: 'Fashion infographic design from course work',
-              thumbUrl: "http://via.placeholder.com/300x300"
+              subTitle: 'Poster-sized visual instruction illustrations from course work',
+              thumbUrl: howTo
             },
             { title: 'Evolution of IT', 
               subTitle: 'Visual Storytelling design',
-              thumbUrl: "http://via.placeholder.com/300x300"
+              thumbUrl: itEvolution
             },
+            { title: 'Fashionable Me', 
+              subTitle: 'Fashion infographic design from course work',
+              thumbUrl: fashion
+            },            
             { title: 'Destinations Magzine', 
-              subTitle: '10-page Layout design from course work',
-              thumbUrl: "http://via.placeholder.com/300x300"
+              subTitle: '10-page cover and layout design from course work',
+              thumbUrl: magzine
             },
             { title: 'Self Portrait', 
               subTitle: 'A self portrait illustration from course work',
-              thumbUrl: "http://via.placeholder.com/300x300"
+              thumbUrl: selfPortrait
             }
         ],
         workTypes: [{ type: WORKTYPE_UX, isSelected: true},

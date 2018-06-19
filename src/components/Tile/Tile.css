@@ -1,3 +1,15 @@
+.Tile {
+    text-align: center;
+    box-sizing: border-box;
+}
+
 .Tile h3 {
-    text-transform: uppercase;
+    text-transform: uppercase;    
+}
+
+
+@media (min-width: 680px){
+    .Tile {
+        text-align: left;
+    }
 }
