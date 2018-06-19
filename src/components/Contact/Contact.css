@@ -1,0 +1,19 @@
+.Contact {
+    background-color: #EAE7DC;
+    margin-top: 20px; 
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.SocialIcon {
+    color: #4F4A41;    
+    margin: 0 15px;
+}
+
+.SocialIcon:hover {
+    color: #E85A4F;
+}
