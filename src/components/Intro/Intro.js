@@ -12,7 +12,7 @@ const intro = (props) => {
           <h1>Li-Ling Chang</h1>
           <p>(pronounced Lee-Ling-Chang)</p>
           <h4>I am a web developer who is passionate about creating simple and unique user experiences for everyday things.
-            I also enjoy design graphics and illustrations.
+            I also enjoy designing graphics and illustrations.
           </h4>
           </div>
         </div>

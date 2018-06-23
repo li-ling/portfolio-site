@@ -30,7 +30,7 @@ class Portfolio extends Component {
         ],
         GraphicsWorks: [
             { title: 'Creative Confidence', 
-              subTitle: 'Book cover design from course work',
+              subTitle: 'Book covers design from course work',
               thumbUrl: bookCover
             },
             { title: 'How To Get Kids to Eat Their Vegetables and Fruit ', 
@@ -42,11 +42,11 @@ class Portfolio extends Component {
               thumbUrl: itEvolution
             },
             { title: 'Fashionable Me', 
-              subTitle: 'Fashion infographic design from course work',
+              subTitle: 'Personal fashion style and fashion infographic design from course work',
               thumbUrl: fashion
             },            
             { title: 'Destinations Magzine', 
-              subTitle: '10-page cover and layout design from course work',
+              subTitle: '10-page magzine covers and layout design from course work',
               thumbUrl: magzine
             },
             { title: 'Self Portrait', 
