@@ -1,10 +1,11 @@
 import React, {Fragment, Component } from 'react'; 
+import Toolbar from '../../components/Navigation/ToolBar/ToolBar';
 
 class Layout extends Component {
 render() {
    return (
        <Fragment>
-            <div>Toolbar, Logo, SideDrawer, Backdrop</div>
+           <Toolbar />
             <main>
                 {this.props.children}
             </main>
