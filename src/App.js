@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Route, Switch } from "react-router-dom";
-import Layout from './containers/Layout/Layout';
+import Layout from './hoc/Layout/Layout';
 import Intro from "./components/Intro/Intro";
 import Portfolio from './containers/Portfolio/Portfolio';
 import About from './components/About/About';

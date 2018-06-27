@@ -1,6 +1,6 @@
 .Intro {
     background-color: #EAE7DC;
-    margin: 56px 0 20px 0;   
+    margin-top: 56px;   
 }
 
 .IntroContent {
@@ -32,8 +32,9 @@
         flex-flow: row;        
         justify-content: space-between;
         margin: auto;
-        padding: 10px; 
-        text-align: left;       
+        padding: 28px 0 10px 0; 
+        text-align: left;
+        align-items: center;       
     } 
     
     .Intro Img {        

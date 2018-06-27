@@ -1,6 +1,8 @@
 import React, { Component } from 'react'; 
+import { withRouter } from "react-router-dom";
 import styles from './Portfolio.css';
 import Tile from '../../components/Tile/Tile';
+import ScrollIntoView from '../../hoc/ScrollIntoView/ScrollIntoView';
 
 import bookCover from '../../assets/images/Book_cover_thumb_300.jpg';
 import howTo from '../../assets/images/how_to_thumb_300.jpg';
@@ -69,8 +71,8 @@ class Portfolio extends Component {
     render() {
         const selectedWorkType = this.state.workTypes.filter(w => w.isSelected);
         const Tiles = selectedWorkType[0].type === WORKTYPE_UX ? this.state.UXWorks : this.state.GraphicsWorks;                
-
-        return (        
+        return ( 
+         <ScrollIntoView id={this.props.location ? this.props.location.hash : null}>       
             <section className={styles.Portfolio} id="portfolio">
                 <h1>Portfolio</h1>
                 <ul>
@@ -91,9 +93,10 @@ class Portfolio extends Component {
                         ) }
                 </div>
             </section>
+            </ScrollIntoView>
         );
     }
 
 }
 
-export default Portfolio;
+export default withRouter(Portfolio);

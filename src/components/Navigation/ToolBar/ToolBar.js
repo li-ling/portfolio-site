@@ -1,5 +1,5 @@
 import React from 'react'; 
-// import { a } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from './ToolBar.css';
 
 const toolbar = (props) => {
@@ -14,16 +14,16 @@ const toolbar = (props) => {
     <nav>
         <ul className={styles.NavigationItems}>
             <li className={styles.NavigationItem}>
-                <a href='/'>Home</a>
+                <NavLink exact to='/#intro' activeClassName={styles.active}>Home</NavLink>
             </li>            
             <li className={styles.NavigationItem}>
-                <a href='/#portfolio'>Portfolio</a>
+                <NavLink to='/#portfolio' >Portfolio</NavLink>
             </li>            
             <li className={styles.NavigationItem}>
-                <a href='/'>About</a>
+                <NavLink to='/about' activeClassName={styles.active}>About</NavLink>
             </li>            
             <li className={styles.NavigationItem}>
-                <a href='/#contact'>Contact</a>
+                <NavLink to='/#contact' >Contact</NavLink>
             </li>            
         </ul>
     </nav>
