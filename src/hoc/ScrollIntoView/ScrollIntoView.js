@@ -7,12 +7,6 @@ class ScrollIntoView extends Component {
     }
   
     componentDidUpdate(prevProps, prevState) {
-    console.log('[ScrollIntoView] componentDidUpdate: this.props= ');
-    console.log(this.props);
-    
-    console.log('[ScrollIntoView] componentDidUpdate: prevProps= ');
-    console.log(prevProps);
-
       this.scroll()
     }
   

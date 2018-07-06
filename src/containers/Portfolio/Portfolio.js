@@ -5,16 +5,18 @@ import Tile from '../../components/Tile/Tile';
 import ScrollIntoView from '../../hoc/ScrollIntoView/ScrollIntoView';
 import Gallery from '../../components/Gallery/Gallery';
 
-import bookCover from '../../assets/images/Book_cover_thumb_300.jpg';
+// import bookCover from '../../assets/images/Book_cover_thumb_300.jpg';
 import howTo from '../../assets/images/how_to_thumb_300.jpg';
 import fashion from '../../assets/images/Fashion_Info_thumb_300.jpg';
 import selfPortrait from '../../assets/images/self_portrait_thumb_300.jpg';
 import magzine from '../../assets/images/magzine_thumb_300.jpg';
 import itEvolution from '../../assets/images/IT_Evolution_thumb_300.png';
 
+
 const WORKTYPE_UX = 'UX';
 const WORKTYPE_GRAPHICS = 'Graphics';
-
+const images = require.context('../../assets/images', true);
+const bookCover = images('./Book_cover_thumb_300.jpg');
 class Portfolio extends Component {
     state = {
         UXWorks: [
@@ -50,7 +52,12 @@ class Portfolio extends Component {
             },            
             { title: 'Destinations Magzine', 
               subTitle: '10-page magzine covers and layout design from course work',
-              thumbUrl: magzine
+              thumbUrl: magzine,
+              galleryPics: [
+                  "../../assets/images/gallery/dest_1.jpg",
+                  "../../assets/images/gallery/dest_2.jpg",
+                  "../../assets/images/gallery/dest_3.jpg"
+              ]
             },
             { title: 'Self Portrait', 
               subTitle: 'A self portrait illustration from course work',
@@ -60,7 +67,8 @@ class Portfolio extends Component {
         workTypes: [{ type: WORKTYPE_UX, isSelected: true},
                     { type:WORKTYPE_GRAPHICS, isSelected: false}
                 ],
-        showGallery: false
+        showGallery: false,
+        selectedWork: null
     }
 
     onWorkTypeChange = (event, selected) => {
@@ -74,16 +82,19 @@ class Portfolio extends Component {
         this.setState({showGallery: false})
     }
     
-    onTileClick = () => {
-        this.setState({showGallery: true})
+    onTileClick = (tile) => {
+        this.setState({showGallery: true, selectedWork: tile})
     }
 
     render() {
         const selectedWorkType = this.state.workTypes.filter(w => w.isSelected);
         const Tiles = selectedWorkType[0].type === WORKTYPE_UX ? this.state.UXWorks : this.state.GraphicsWorks;                
+
         return (
          <Fragment>
-            <Gallery show={this.state.showGallery} close={this.onCloseWindowHandler}/>
+            <Gallery show={this.state.showGallery} 
+                    close={this.onCloseWindowHandler} 
+                    images={ this.state.selectedWork ? this.state.selectedWork.galleryPics : [] }/>
  
          <ScrollIntoView id={this.props.location ? this.props.location.hash : null}>       
             <section className={styles.Portfolio} id="portfolio">
@@ -102,7 +113,7 @@ class Portfolio extends Component {
                             title = {t.title}
                             subTitle = {t.subTitle}
                             thumbUrl = {t.thumbUrl}
-                            clicked = {this.onTileClick}
+                            clicked = {()=>this.onTileClick(t)}
                         />                             
                         ) }
                 </div>
