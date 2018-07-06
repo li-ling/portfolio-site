@@ -9,20 +9,30 @@ const importAll = (r) => {
 
 class Gallery extends Component {
 
+  state = {
+    images: [],
+    focalImage: ""
+  }
+
   componentDidMount() {
     console.log('Gallery [componentDidMount]');    
     console.log(this.props);    
+    let newImages = importAll(require.context('../../assets/images/magzine', false, /\.(png|jpe?g|svg)$/));
+    this.setState({images: newImages,
+                  focalImage: newImages[0]});
+
   }
   componentDidUpdate() {
     console.log('Gallery [componentDidUpdated]');    
-    console.log(this.props);        
+    console.log(this.props);            
   }
 
+  onChangeSlideImage = (i) => {
+    this.setState({focalImage: this.state.images[i]})
+  }
 
   render() {
-    const images = importAll(require.context('../../assets/images/magzine', false, /\.(png|jpe?g|svg)$/));
 
-    let testPic = images[0];
     const modal = (
       <div className={styles.Backdrop}>
         <div className={styles.Gallery}>
@@ -32,13 +42,13 @@ class Gallery extends Component {
                         onClick={this.props.close}/>
           </div>
           <div className={styles.GalleryBody}> 
-            <img src={testPic} alt={'http://via.placeholder.com/300x300'}/>
-            {/* <div>Focus Picture</div> */}
+            <img src={this.state.focalImage} alt=""/>
             <div className={styles.GallerySlides}> 
-              <img src={testPic} alt={''}/>
-              <div> picture 1</div>
-              <div> picture 2</div>
-              <div> picture 3</div>
+              {
+               this.state.images.map( (m, i) =>
+                <img src={m} alt="" key={i} onClick={()=>this.onChangeSlideImage(i)} />
+                ) 
+              }
             </div>
           </div>
           <div></div>

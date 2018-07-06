@@ -53,11 +53,7 @@ class Portfolio extends Component {
             { title: 'Destinations Magzine', 
               subTitle: '10-page magzine covers and layout design from course work',
               thumbUrl: magzine,
-              galleryPics: [
-                  "../../assets/images/gallery/dest_1.jpg",
-                  "../../assets/images/gallery/dest_2.jpg",
-                  "../../assets/images/gallery/dest_3.jpg"
-              ]
+              galleryName: "magzine"
             },
             { title: 'Self Portrait', 
               subTitle: 'A self portrait illustration from course work',
@@ -94,7 +90,7 @@ class Portfolio extends Component {
          <Fragment>
             <Gallery show={this.state.showGallery} 
                     close={this.onCloseWindowHandler} 
-                    images={ this.state.selectedWork ? this.state.selectedWork.galleryPics : [] }/>
+                    galleryName={ this.state.selectedWork ? this.state.selectedWork.galleryName : null }/>
  
          <ScrollIntoView id={this.props.location ? this.props.location.hash : null}>       
             <section className={styles.Portfolio} id="portfolio">
