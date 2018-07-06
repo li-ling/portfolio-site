@@ -8,7 +8,7 @@ const contact = (props) => {
   return (
     <section id="contact" className={styles.Contact}>
       <h5>I currently work in Calgary, Canada.</h5>
-      <div>
+      <div className={styles.SocialIcons}>
         <a href="mailto:bundleofjoy@gmail.com">
           <FontAwsomeIcon className={styles.SocialIcon} icon={faEnvelope} size="2x"/>
         </a> 
