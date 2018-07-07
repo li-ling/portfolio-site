@@ -39,10 +39,16 @@ class Gallery extends Component {
     this.setState({focalImage: this.state.images[i]})
   }
 
+  preventDefault = (e) => {
+    console.log(e.target);    
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  
   render() {
     const modal = (
-      <div className={styles.Backdrop}>
-        <div className={styles.Gallery}>
+      <div className={styles.Backdrop} onClick={this.props.close}>
+        <div className={styles.Gallery} onClick={this.preventDefault}>
           <div>
           <FontAwsomeIcon icon={faWindowClose} size="lg"
                         className={styles.Close} 
