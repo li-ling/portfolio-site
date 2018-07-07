@@ -9,7 +9,7 @@ import Gallery from '../../components/Gallery/Gallery';
 import howTo from '../../assets/images/how_to_thumb_300.jpg';
 import fashion from '../../assets/images/Fashion_Info_thumb_300.jpg';
 import selfPortrait from '../../assets/images/self_portrait_thumb_300.jpg';
-import magzine from '../../assets/images/magzine_thumb_300.jpg';
+import magazine from '../../assets/images/magazine_thumb_300.jpg';
 import itEvolution from '../../assets/images/IT_Evolution_thumb_300.png';
 
 
@@ -36,28 +36,33 @@ class Portfolio extends Component {
         GraphicsWorks: [
             { title: 'Creative Confidence', 
               subTitle: 'Book covers design from course work',
-              thumbUrl: bookCover
+              thumbUrl: bookCover,
+              galleryName: 'bookCover'
             },
             { title: 'How To Get Kids to Eat Their Vegetables and Fruit ', 
               subTitle: 'Poster-sized visual instruction illustrations from course work',
-              thumbUrl: howTo
+              thumbUrl: howTo,
+              galleryName: 'howTo'
             },
             { title: 'Evolution of IT', 
               subTitle: 'Visual Storytelling design',
-              thumbUrl: itEvolution
+              thumbUrl: itEvolution,
+              galleryName: 'itEvolution'
             },
             { title: 'Fashionable Me', 
               subTitle: 'Personal fashion style and fashion infographic design from course work',
-              thumbUrl: fashion
+              thumbUrl: fashion,
+              galleryName: 'fashion'
             },            
-            { title: 'Destinations Magzine', 
-              subTitle: '10-page magzine covers and layout design from course work',
-              thumbUrl: magzine,
-              galleryName: "magzine"
+            { title: 'Destinations Magazine', 
+              subTitle: '10-page magazine covers and layout design from course work',
+              thumbUrl: magazine,
+              galleryName: "magazine"
             },
             { title: 'Self Portrait', 
               subTitle: 'A self portrait illustration from course work',
-              thumbUrl: selfPortrait
+              thumbUrl: selfPortrait,
+              galleryName: 'selfPortrait'
             }
         ],
         workTypes: [{ type: WORKTYPE_UX, isSelected: true},

@@ -3,8 +3,12 @@ import styles from './Gallery.css';
 import FontAwsomeIcon from '@fortawesome/react-fontawesome';
 import {faWindowClose} from '@fortawesome/fontawesome-free-solid';
 
-const importAll = (r) => {
-  return r.keys().map(r);
+const importAll = (r, filterKey) => {
+    // console.log(r.keys());    
+    // console.log(r.keys().filter(f => f.startsWith(`./${filterKey}/`)));
+    
+    let images = r.keys().filter(f => f.startsWith(`./${filterKey}/`));
+  return images.map(r);
 }
 
 class Gallery extends Component {
@@ -16,15 +20,19 @@ class Gallery extends Component {
 
   componentDidMount() {
     console.log('Gallery [componentDidMount]');    
-    console.log(this.props);    
-    let newImages = importAll(require.context('../../assets/images/magzine', false, /\.(png|jpe?g|svg)$/));
-    this.setState({images: newImages,
-                  focalImage: newImages[0]});
-
+    console.log(this.props);        
   }
-  componentDidUpdate() {
-    console.log('Gallery [componentDidUpdated]');    
-    console.log(this.props);            
+
+  componentDidUpdate(prevProps) {
+    console.log('Gallery [componentDidUpdated]');        
+    if(this.props.galleryName !== undefined && this.props.galleryName !== prevProps.galleryName){      
+      console.log('loading image gallery: ' + this.props.galleryName);
+
+      let newImages = importAll(require.context('../../assets/images/galleries', true, /\.(png|jpe?g|svg)$/)
+                        , this.props.galleryName);
+      this.setState({images: newImages,
+                    focalImage: newImages[0]});
+    }    
   }
 
   onChangeSlideImage = (i) => {
@@ -32,7 +40,6 @@ class Gallery extends Component {
   }
 
   render() {
-
     const modal = (
       <div className={styles.Backdrop}>
         <div className={styles.Gallery}>
