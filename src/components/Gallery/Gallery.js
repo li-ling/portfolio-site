@@ -24,7 +24,7 @@ class Gallery extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    console.log('Gallery [componentDidUpdated]');        
+    // console.log('Gallery [componentDidUpdated]');        
     if(this.props.galleryName !== undefined && this.props.galleryName !== prevProps.galleryName){      
       console.log('loading image gallery: ' + this.props.galleryName);
 
