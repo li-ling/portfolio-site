@@ -15,12 +15,12 @@
     z-index: 500;
     min-width: 60%;
     max-width: 90%;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px black;
-    padding: 10px 10px 20px 10px;
     left: 5%;
     top: 10%;
     bottom: 10%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 10px 10px 20px 10px;
     box-sizing: border-box;
     transition: all 0.3s ease-out;    
     display: grid;
@@ -28,7 +28,6 @@
     grid-gap: 10px;    
     overflow: hidden;
     resize: auto;
-    box-sizing: border-box;
 }
 
 .GalleryBody{
@@ -59,34 +58,34 @@
 
 @media (min-width: 600px){
     .Gallery {
-        background-color: white;
+        /* background-color: white;
         position: fixed;
         z-index: 500;
-        min-width: 60%;
+        min-width: 60%; */
         max-width: 80%;
-        border: 1px solid #ccc;
-        box-shadow: 1px 1px 1px black;
         padding: 10px;
         left: 10%;
         top: 10%;
         bottom: 10%;
-        box-sizing: border-box;
+        /* border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px black; */
+        /* box-sizing: border-box;
         transition: all 0.3s ease-out;    
         display: grid;
         grid-template-rows: .1fr 5fr;    
         grid-gap: 10px;    
-        overflow: hidden;
+        overflow: hidden; */
+        /* resize: auto; */
         max-height: 480px;
-        resize: auto;
-        box-sizing: border-box;
     }
     
     .GalleryBody{
-        display: grid;    
+        /* display: grid;     */
         grid-template-columns:4fr 100px;   
-        grid-gap: 10px;        
-        max-height: 480px; /*laptop or desktop */
-        overflow: auto;
+        /* grid-gap: 10px;         */
+        max-height: 480px; 
+        /* overflow: auto; */
+        align-items: initial;
     }
 
     .GalleryBody > img {
