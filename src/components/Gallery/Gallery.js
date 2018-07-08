@@ -19,8 +19,13 @@ class Gallery extends Component {
   }
 
   componentDidMount() {
-    console.log('Gallery [componentDidMount]');    
-    console.log(this.props);        
+    // console.log('Gallery [componentDidMount]');    
+    // console.log(this.props);        
+    document.addEventListener("keydown", this.escPressed.bind(this), false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.escPressed, false);
   }
 
   componentDidUpdate(prevProps) {
@@ -35,6 +40,11 @@ class Gallery extends Component {
     }    
   }
 
+  escPressed = (e) => {
+    if(e.keyCode === 27)
+      (this.props.close)();
+  }
+
   onChangeSlideImage = (i) => {
     this.setState({focalImage: this.state.images[i]})
   }
@@ -47,7 +57,7 @@ class Gallery extends Component {
   
   render() {
     const modal = (
-      <div className={styles.Backdrop} onClick={this.props.close}>
+      <div className={styles.Backdrop} onClick={this.props.close} onKeyDown={this.escPresse}>
         <div className={styles.Gallery} onClick={this.preventDefault}>
           <div>
           <FontAwsomeIcon icon={faWindowClose} size="lg"
