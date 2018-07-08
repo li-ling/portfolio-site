@@ -5,18 +5,10 @@ import Tile from '../../components/Tile/Tile';
 import ScrollIntoView from '../../hoc/ScrollIntoView/ScrollIntoView';
 import Gallery from '../../components/Gallery/Gallery';
 
-// import bookCover from '../../assets/images/Book_cover_thumb_300.jpg';
-import howTo from '../../assets/images/how_to_thumb_300.jpg';
-import fashion from '../../assets/images/Fashion_Info_thumb_300.jpg';
-import selfPortrait from '../../assets/images/self_portrait_thumb_300.jpg';
-import magazine from '../../assets/images/magazine_thumb_300.jpg';
-import itEvolution from '../../assets/images/IT_Evolution_thumb_300.png';
-
-
 const WORKTYPE_UX = 'UX';
 const WORKTYPE_GRAPHICS = 'Graphics';
-const images = require.context('../../assets/images', true);
-const bookCover = images('./Book_cover_thumb_300.jpg');
+const images = require.context('../../assets/images/thumbs', true);
+
 class Portfolio extends Component {
     state = {
         UXWorks: [
@@ -36,32 +28,32 @@ class Portfolio extends Component {
         GraphicsWorks: [
             { title: 'Creative Confidence', 
               subTitle: 'Book covers design from course work',
-              thumbUrl: bookCover,
+              thumbUrl: images('./Book_cover_thumb_300.jpg'),
               galleryName: 'bookCover'
             },
             { title: 'How To Get Kids to Eat Their Vegetables and Fruit ', 
               subTitle: 'Poster-sized visual instruction illustrations from course work',
-              thumbUrl: howTo,
+              thumbUrl: images('./how_to_thumb_300.jpg'),
               galleryName: 'howTo'
             },
             { title: 'Evolution of IT', 
               subTitle: 'Visual Storytelling design',
-              thumbUrl: itEvolution,
+              thumbUrl: images('./IT_Evolution_thumb_300.png'),
               galleryName: 'itEvolution'
             },
             { title: 'Fashionable Me', 
               subTitle: 'Personal fashion style and fashion infographic design from course work',
-              thumbUrl: fashion,
+              thumbUrl: images('./Fashion_Info_thumb_300.jpg'),
               galleryName: 'fashion'
             },            
             { title: 'Destinations Magazine', 
               subTitle: '10-page magazine covers and layout design from course work',
-              thumbUrl: magazine,
+              thumbUrl: images('./magazine_thumb_300.jpg'),
               galleryName: "magazine"
             },
             { title: 'Self Portrait', 
               subTitle: 'A self portrait illustration from course work',
-              thumbUrl: selfPortrait,
+              thumbUrl: images('./self_portrait_thumb_300.jpg'),
               galleryName: 'selfPortrait'
             }
         ],

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { withRouter } from "react-router-dom";
 import styles from './Intro.css' ;
-import portraitImg from '../../assets/images/portrait_sm_sep.jpg';
+import portraitImg from '../../assets/images/thumbs/portrait_sm_sep.jpg';
 import ScrollIntoView from '../../hoc/ScrollIntoView/ScrollIntoView';
 
 class Intro extends Component {
