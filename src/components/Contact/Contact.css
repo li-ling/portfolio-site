@@ -21,3 +21,8 @@
 .SocialIcon:hover {
     color: #E85A4F;
 }
+
+.Heart {
+    margin: 0 15px;
+    color: #E85A4F;
+}
