@@ -65,8 +65,8 @@ class Portfolio extends Component {
               galleryName: 'selfPortrait'
             }
         ],
-        workTypes: [{ type: WORKTYPE_UX, isSelected: true},
-                    { type:WORKTYPE_GRAPHICS, isSelected: false}
+        workTypes: [{ type: WORKTYPE_UX, isSelected: false},
+                    { type:WORKTYPE_GRAPHICS, isSelected: true}
                 ],
         showGallery: false,
         selectedWork: null
