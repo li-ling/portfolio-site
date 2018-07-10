@@ -72,23 +72,32 @@ class Portfolio extends Component {
     }
 
     onCloseWindowHandler = () => {
-        this.setState({showGallery: false})
+        this.setState({showGallery: false});        
+
+        document.body.style.overflow = 'auto';
+        document.body.scroll = "yes";                
     }
     
     onTileClick = (tile) => {
-        this.setState({showGallery: true, selectedWork: tile})
+        this.setState({showGallery: true, selectedWork: tile});
+
+        document.body.style.overflow = 'hidden';
+        document.body.scroll = "no";        
     }
 
     render() {
         const selectedWorkType = this.state.workTypes.filter(w => w.isSelected);
         const Tiles = selectedWorkType[0].type === WORKTYPE_UX ? this.state.UXWorks : this.state.GraphicsWorks;                
+        
+        const galleryModal = this.state.showGallery ? (
+            <Gallery 
+                    close={this.onCloseWindowHandler} 
+                    galleryName={ this.state.selectedWork ? this.state.selectedWork.galleryName : null }/>
+        )  : null;
 
         return (
          <Fragment>
-            <Gallery show={this.state.showGallery} 
-                    close={this.onCloseWindowHandler} 
-                    galleryName={ this.state.selectedWork ? this.state.selectedWork.galleryName : null }/>
- 
+             {galleryModal}
          <ScrollIntoView id={this.props.location ? this.props.location.hash : null}>       
             <section className={styles.Portfolio} id="portfolio">
                 <h1>Portfolio</h1>

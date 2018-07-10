@@ -19,8 +19,14 @@ class Gallery extends Component {
   }
 
   componentDidMount() {
-    // console.log('Gallery [componentDidMount]');    
+    // console.log('Gallery [componentDidMount]');      
     // console.log(this.props);        
+
+    let newImages = importAll(require.context('../../assets/images/galleries', true, /\.(png|jpe?g|svg)$/)
+    , this.props.galleryName);
+    this.setState({images: newImages,
+    focalImage: newImages[0]});
+
     document.addEventListener("keydown", this.escPressed.bind(this), false);
   }
 
@@ -30,14 +36,14 @@ class Gallery extends Component {
 
   componentDidUpdate(prevProps) {
     // console.log('Gallery [componentDidUpdated]');        
-    if(this.props.galleryName !== undefined && this.props.galleryName !== prevProps.galleryName){      
-      console.log('loading image gallery: ' + this.props.galleryName);
+    // if(this.props.galleryName !== undefined && this.props.galleryName !== prevProps.galleryName){      
+    //   console.log('loading image gallery: ' + this.props.galleryName);
 
-      let newImages = importAll(require.context('../../assets/images/galleries', true, /\.(png|jpe?g|svg)$/)
-                        , this.props.galleryName);
-      this.setState({images: newImages,
-                    focalImage: newImages[0]});
-    }    
+    //   let newImages = importAll(require.context('../../assets/images/galleries', true, /\.(png|jpe?g|svg)$/)
+    //                     , this.props.galleryName);
+    //   this.setState({images: newImages,
+    //                 focalImage: newImages[0]});
+    // }    
   }
 
   escPressed = (e) => {
@@ -50,11 +56,11 @@ class Gallery extends Component {
   }
 
   preventDefault = (e) => {
-    console.log(e.target);    
-    e.preventDefault();
+    console.log(e.target);  
+      e.preventDefault();
     e.stopPropagation();
   }
-  
+
   render() {
     const modal = (
       <div className={styles.Backdrop} onClick={this.props.close} onKeyDown={this.escPresse}>
@@ -79,9 +85,7 @@ class Gallery extends Component {
   
     );
 
-    return (
-      this.props.show ? modal : null    
-     );
+    return modal;
 
   }
 
