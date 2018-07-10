@@ -23,7 +23,7 @@ const toolbar = (props) => {
                 <NavLink to='/about' activeClassName={styles.active}>About</NavLink>
             </li>            
             <li className={styles.NavigationItem}>
-                <NavLink to='/#contact' >Contact</NavLink>
+                <NavLink to='#contact' >Contact</NavLink>
             </li>            
         </ul>
     </nav>
