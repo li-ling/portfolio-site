@@ -3,11 +3,11 @@ import styles from './About.css';
 
 const about = (props) => {
   return (
-      <div className={styles.About}>
-        <div>
+            
+      <div className={styles.About} id='about'>
             <div className={styles.Heading}>
-                <h2>My Story</h2>
-                <h3>Techical and Creative</h3>
+                <h1>My Story</h1>
+                <p>Techical and Creative</p>
             </div>
             <h3>Developer</h3>
             <p>I have a Software Engineering degree and have always been interested in learning new things and playing with the latest technologies.</p>
@@ -23,10 +23,9 @@ const about = (props) => {
                 I love seeing the world through users lenses. The psychology behind user behaviours is absolutely fascinating!
             </p>
             <p>I believe this is a very exciting time for UX designers. Technologies are interwoven so deeply into our lives now - from wearable devices, to household 
-                appliances, to robots, to AR and VR! There are so many opportunities for creating new experiences. And I'd love nothing more than be right in the
+                appliances, to robots, to AR and VR! There are so many opportunities for creating new experiences. I'd love nothing more than be right in the
                 center of it all.
             </p>
-          </div>
       </div>
   )
 };
