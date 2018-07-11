@@ -89,15 +89,15 @@ class Portfolio extends Component {
         const selectedWorkType = this.state.workTypes.filter(w => w.isSelected);
         const Tiles = selectedWorkType[0].type === WORKTYPE_UX ? this.state.UXWorks : this.state.GraphicsWorks;                
         
-        const galleryModal = this.state.showGallery ? (
-            <Gallery 
-                    close={this.onCloseWindowHandler} 
-                    galleryName={ this.state.selectedWork ? this.state.selectedWork.galleryName : null }/>
-        )  : null;
+        // const galleryModal = this.state.showGallery ? (
+        //     <Gallery 
+        //             close={this.onCloseWindowHandler} 
+        //             galleryName={ this.state.selectedWork ? this.state.selectedWork.galleryName : null }/>
+        // )  : null;
 
         return (
          <Fragment>
-             {galleryModal}
+             {/* {galleryModal} */}
          <ScrollIntoView id={this.props.location ? this.props.location.hash : null}>       
             <section className={styles.Portfolio} id="portfolio">
                 <h1>Portfolio</h1>
@@ -115,7 +115,8 @@ class Portfolio extends Component {
                             title = {t.title}
                             subTitle = {t.subTitle}
                             thumbUrl = {t.thumbUrl}
-                            clicked = {()=>this.onTileClick(t)}
+                            galleryName = {t.galleryName}
+                            // clicked = {()=>this.onTileClick(t)}
                         />                             
                         ) }
                 </div>
