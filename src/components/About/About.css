@@ -8,6 +8,12 @@
 
 }
 
+.About img{
+    width: 100px;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+
 .Heading {
     text-align: center;
 }
