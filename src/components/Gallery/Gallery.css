@@ -15,9 +15,11 @@
     z-index: 500;
     min-width: 60%;
     max-width: 90%;
-    left: 5%;
+    left: 50%;
     top: 10%;
-    bottom: 10%;
+    max-height: 80%;
+    /* bottom: 10%; */
+    transform: translateX(-50%);
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px black;
     padding: 10px 10px 20px 10px;
@@ -57,12 +59,14 @@
 
 @media (min-width: 600px){
     .Gallery {
-        max-width: 80%;
+        width: 75%;
+        max-width: 900px;
         padding: 10px;
-        left: 10%;
         top: 10%;
-        bottom: 10%;
+        left: 50%;
+        min-height: 70%;
         max-height: 480px;
+        transform: translateX(-50%);
     }
     
     .GalleryBody{
