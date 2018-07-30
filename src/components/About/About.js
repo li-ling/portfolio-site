@@ -21,22 +21,23 @@ class About extends Component {
                         </h2>
                   </div>
                   <h3>Developer</h3>
-                  <p>I have a Software Engineering degree and have always enjoyed learning new things and interested in the latest technologies.</p>
-                  <p>I get bored when I work on the same thing for a long period of time.</p>
+                  <p>I have a Software Engineering degree and have always enjoyed learning new technologies.
+                  I love an environment with constant innovation and filled with new ideas.</p>
                   <h3>Designer</h3>
-                  <p>Having been invovled in arts throughout my youth, I started longing for an avenue to express my creativity somehwere along my career. 
-                      I decided to enroll in Graphic Design program and immediately fell in love with it. I began applying design principles into web design and moving
-                      towards front-end development.
+                  <p>Having been involved in arts throughout my life. I started longing for a way to express my creativity as part of my career about 5 years ago. 
+                      I decided to enroll in a Graphic Design program and immediately fell in love with it. I began applying design principles to web development 
+                      and enjoy creating designs which resonate with users.
                   </p>
                   <h3>User Experience Design</h3>
-                  <p>After going through a few projects and seeing the products of my labor did not make it to the end users, I decided to transition into UX Design.
-                      I want to avoid the traditional mistakes of building something that we 'believe' is what the users want without doing proper research and validation. 
-                      I love seeing the world through users lenses. The psychology behind user behaviours is absolutely fascinating!
+                  <p>After years of development where I rarely interacted with end users, I began to look for roles that would allow me to interact with users more. 
+                      I took Scott Klemmer's Interaction Design Specialization course from University of California San Diego and again, fell in love with it.
+                      I find that User-Centered-Design approach helps to create better solutions.
                   </p>
                   <p>I believe this is a very exciting time for UX designers. Technologies are interwoven so deeply into our lives now - from wearable devices, to household 
-                      appliances, to robots, to AR and VR! There are so many opportunities for creating new and unique user experiences. 
+                      appliances, to robots, to AR and more. There are so many opportunities for creating new and unique user experiences. 
                       I'd love nothing more than be right in the center of it all.
                   </p>
+                  <p>During downtimes, I like biking, hiking, photography, cooking, playing/listening to Jazz, and spending time with family.</p>
             </div>
             </ScrollIntoView>            
         )

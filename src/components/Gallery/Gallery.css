@@ -70,13 +70,14 @@
     
     .GalleryBody{
         grid-template-columns:4fr 100px;   
-        max-height: 480px; 
+        max-height: 480px;
         align-items: initial;
     }
 
     .GalleryBody > img {
         display: block;
         max-height: 100%;
+        max-width: 100%;
         margin: 0 auto;
     }
 
