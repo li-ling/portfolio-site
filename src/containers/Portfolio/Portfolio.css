@@ -24,6 +24,10 @@
     cursor: pointer;
 }
 
+.Portfolio li:hover{
+    transform: scale(1.1);    
+}
+
 .Tiles {    
     margin: 20px;
     display: grid;

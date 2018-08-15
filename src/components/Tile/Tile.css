@@ -1,19 +1,15 @@
 .Tile {
     text-align: center;
     box-sizing: border-box;
+    padding: 15px;
 }
 
 .Tile h3 {
     text-transform: uppercase;    
 }
 
-
-@media (min-width: 680px){
-    .Tile {
-        text-align: left;
-    }
-}
-
 .Tile:hover {
     cursor: pointer;
+    border: 1px solid #cecece;
+    box-shadow: 0px 1px 6px #ccc;    
 }
