@@ -27,12 +27,12 @@ class Portfolio extends Component {
         ],
         GraphicsWorks: [
             { title: 'Creative Confidence', 
-              subTitle: 'Book covers design from course work',
+              subTitle: 'Book covers design',
               thumbUrl: images('./Book_cover_thumb_300.jpg'),
               galleryName: 'bookCover'
             },
             { title: 'How To Get Kids to Eat Their Vegetables and Fruit ', 
-              subTitle: 'Poster-sized visual instruction illustrations from course work',
+              subTitle: 'Poster-sized visual instruction illustrations',
               thumbUrl: images('./how_to_thumb_300.jpg'),
               galleryName: 'howTo'
             },
@@ -42,17 +42,17 @@ class Portfolio extends Component {
               galleryName: 'itEvolution'
             },
             { title: 'Fashionable Me', 
-              subTitle: 'Personal fashion style and fashion infographic design from course work',
+              subTitle: 'My personal fashion style and current fashion trend infographic design',
               thumbUrl: images('./Fashion_Info_thumb_300.jpg'),
               galleryName: 'fashion'
             },            
             { title: 'Destinations Magazine', 
-              subTitle: '10-page magazine covers and layout design from course work',
+              subTitle: 'A 10-page magazine-covers and layout design excercise',
               thumbUrl: images('./magazine_thumb_300.jpg'),
               galleryName: "magazine"
             },
             { title: 'Self Portrait', 
-              subTitle: 'A self portrait illustration from course work',
+              subTitle: 'My creative self portrait illustration from course work',
               thumbUrl: images('./self_portrait_thumb_300.jpg'),
               galleryName: 'selfPortrait'
             }

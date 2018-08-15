@@ -33,11 +33,7 @@ class About extends Component {
                       I took Scott Klemmer's Interaction Design Specialization course from University of California San Diego and again, fell in love with it.
                       I find that User-Centered-Design approach helps to create better solutions.
                   </p>
-                  <p>I believe this is a very exciting time for UX designers. Technologies are interwoven so deeply into our lives now - from wearable devices, to household 
-                      appliances, to robots, to AR and more. There are so many opportunities for creating new and unique user experiences. 
-                      I'd love nothing more than be right in the center of it all.
-                  </p>
-                  <p>During downtimes, I like biking, hiking, photography, cooking, playing/listening to Jazz, and spending time with family.</p>
+                  <p>During downtimes, I like biking, hiking, photography, cooking, playing piano, listening to Jazz, and spending time with family.</p>
             </div>
             </ScrollIntoView>            
         )
